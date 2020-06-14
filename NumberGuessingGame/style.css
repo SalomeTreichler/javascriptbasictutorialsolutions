@@ -1,0 +1,27 @@
+.page-title{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.result-paras{
+    margin-top: 50px;
+}
+
+#guessing-field-label{
+    font-size: 18px;
+}
+
+#submit-button{
+    margin-top: 5px;;
+}
+
+.low-or-high h4{
+    text-align: center;
+    margin-top: 20;
+}
+
+.low-or-high h5{
+    text-align: center;
+    margin-top: 20;
+    color: #007aff;
+}

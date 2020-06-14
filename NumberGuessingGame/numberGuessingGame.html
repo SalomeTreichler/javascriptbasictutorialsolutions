@@ -1,0 +1,59 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Basic Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap Links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <!-- Navbar -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Welcome</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="numberGuessingGame.html">Number guessing game</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../CountdownClock/countDownClock.html">Countdown Clock</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../Drumkit/drumkit.html">Drumkit</a>
+            </li>
+        </ul>
+
+        <!--Content-->
+        <h3 class="page-title">NUMBER GUESSING GAME</h3>
+        <h4>Rules:</h4>
+        <ul>
+            <li>Try and guess a random number between 1 and 100.</li>
+            <li>You have 10 attempts to guess the right number.</li>
+        </ul>
+        </br>
+        <form class="form">
+            <div class="form-group">
+                <label for="email" id="guessing-field-label"><b>Your guess</b></label>
+                <input type="number" class="form-control" id="guessField" placeholder="Enter your guess" name="email">
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit-button">Submit guess</button>
+        </form>
+
+        <div class="result-paras">
+            <p>Previous Guesses: <span class="guesses"></span></p>
+            <p>Guesses Remaining: <span class="lastResult">10</span></p>
+            <div class="low-or-high"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
