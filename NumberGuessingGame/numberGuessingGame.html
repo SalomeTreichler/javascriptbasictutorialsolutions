@@ -43,15 +43,15 @@
         <form class="form">
             <div class="form-group">
                 <label for="email" id="guessing-field-label"><b>Your guess</b></label>
-                <input type="number" class="form-control" id="guessField" placeholder="Enter your guess" name="email">
+                <input type="number" class="form-control" id="guess-field" placeholder="Enter your guess" name="email">
             </div>
             <button type="submit" class="btn btn-primary" id="submit-button">Submit guess</button>
         </form>
 
         <div class="result-paras">
-            <p>Previous Guesses: <span class="guesses"></span></p>
-            <p>Guesses Remaining: <span class="lastResult">10</span></p>
-            <div class="low-or-high"></div>
+            <p>Previous Guesses: <span id="guesses"></span></p>
+            <p>Guesses Remaining: <span id="last-result">10</span></p>
+            <div id="low-or-high"></div>
         </div>
     </div>
 

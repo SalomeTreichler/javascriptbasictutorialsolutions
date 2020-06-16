@@ -1,14 +1,14 @@
 //Generate a random number between 1 and 500
 let randomNumber = parseInt((Math.random() * 100) + 1);
 
-//Get all ELements you need
-const submit = document.querySelector('#submit-button');
-const restart = document.querySelector("#button-placeholder")
-const userInput = document.querySelector('#guessField');
-const guessSlot = document.querySelector('.guesses');
-const remaining = document.querySelector('.lastResult');
-const lowOrHigh = document.querySelector('.low-or-high');
+//Get all Elements you need
+const submit = document.getElementById('submit-button');
+const userInput = document.getElementById('guess-field');
+const guessSlot = document.getElementById('guesses');
+const remaining = document.getElementById('last-result');
+const lowOrHigh = document.getElementById('low-or-high');
 
+//Other Variables you gonna need
 let previousGuesses = [];
 let numGuesses = 1;
 let playGame = true;
@@ -46,6 +46,17 @@ function validateGuess(guess) {
     }
 }
 
+function displayGuesses(guess) {
+    userInput.value = '';
+    guessSlot.innerHTML += `${guess}  `;
+    numGuesses++
+    remaining.innerHTML = `${11 - numGuesses}  `;
+}
+
+function displayMessage(message) {
+    lowOrHigh.innerHTML = `<h4>${message}</h4>`
+}
+
 function checkGuess(guess) {
     //Display clue if guess is too high or too low
     if (guess === randomNumber) {
@@ -56,17 +67,6 @@ function checkGuess(guess) {
     } else if (guess > randomNumber) {
         displayMessage(`Too High! Try again!`);
     }
-}
-
-function displayGuesses(guess) {
-    userInput.value = '';
-    guessSlot.innerHTML += `${guess}  `;
-    numGuesses++
-    remaining.innerHTML = `${11 - numGuesses}  `;
-}
-
-function displayMessage(message) {
-    lowOrHigh.innerHTML = `<h4>${message}</h4>`
 }
 
 function endGame() {
@@ -81,7 +81,7 @@ function endGame() {
 }
 
 function newGame() {
-    const newGameButton = document.querySelector('#restart');
+    const newGameButton = document.getElementById('restart');
     newGameButton.addEventListener('click', function () {
         //Pick a new random number
         randomNumber = parseInt((Math.random() * 100) + 1);
@@ -91,9 +91,6 @@ function newGame() {
         lowOrHigh.innerHTML = '';
         remaining.innerHTML = `${11 - numGuesses}  `;
         userInput.removeAttribute('disabled');
-        startOver.removeChild(p);
         playGame = true;
     })
 }
-//Allow to restart game with restart button
-//Change DIV to a form so it can accept the enter key
