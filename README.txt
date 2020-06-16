@@ -1,5 +1,5 @@
 Welcome to my Githup Repository!
 
-This is a Basic Tutorial for people with basic programming skills to learn some JavaScript. The instructions are written in German as well as the comments in the code itself.
+This Project is the Solution Project to my Basic JavaScript Tutorial. Please follow the following lInk if you're interested in it:
 
-I hope you enjoy learning JavaScript and will have lots of fun with the given tasks!
+https://github.com/SalomeTreichler/javascriptbasicstutorial
